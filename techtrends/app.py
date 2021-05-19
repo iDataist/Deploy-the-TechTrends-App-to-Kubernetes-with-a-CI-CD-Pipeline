@@ -2,7 +2,6 @@ import sqlite3
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 import logging
-from datetime import datetime
 from multiprocessing import Value
 
 counter = Value('i', 0)
@@ -68,14 +67,13 @@ def create():
 
     return render_template('create.html')
 
-@app.route("/status")
+@app.route("/healthz")
 def healthcheck():
     response = app.response_class(
         response=json.dumps({"result": "OK - healthy"}),
         status=200,
         mimetype='application/json'
     )
-    app.logger.info(f"{datetime.now()}, status endpoint was reached")
     return response
 
 @app.route("/metrics")
@@ -83,7 +81,6 @@ def metrics():
     with counter.get_lock():
         counter.value += 1
         out = counter.value
-    app.logger.info(f"{datetime.now()}, metrics endpoint was reached")
     return jsonify(count=out)
 
 # start the application on port 3111
