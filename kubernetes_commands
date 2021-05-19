@@ -1,0 +1,2 @@
+kubectl config set-context --current --namespace=sandbox
+kubectl apply -f kubernetes/
