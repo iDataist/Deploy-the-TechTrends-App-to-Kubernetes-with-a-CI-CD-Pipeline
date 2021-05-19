@@ -1,27 +1,2 @@
-INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:03] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:10] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:11] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:17] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:22] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:23] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:37] "GET /health HTTP/1.1" 404 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:43] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:44] "GET / HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:21:46.191380, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:21:46] "GET /metrics HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:22:11.220830, status endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:22:11] "GET /status HTTP/1.1" 200 -
-INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:app:2021-05-19 15:30:27.415097, status endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:27] "GET /status HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:30:31.135855, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:31] "GET /metrics HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:30:37.152996, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:37] "GET /metrics HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:30:37.900220, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:37] "GET /metrics HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:30:38.673397, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:38] "GET /metrics HTTP/1.1" 200 -
-INFO:app:2021-05-19 15:30:39.213614, metrics endpoint was reached
-INFO:werkzeug:127.0.0.1 - - [19/May/2021 15:30:39] "GET /metrics HTTP/1.1" 200 -
+
+
