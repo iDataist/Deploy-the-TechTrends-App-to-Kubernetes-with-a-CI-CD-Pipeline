@@ -10,3 +10,8 @@ INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:17:21] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:17:26] "GET /8 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:17:34] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:17:37] "GET /unknown HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:19:07] "GET /unknown HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:19:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:19:13] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:19:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2021 17:23:44] "GET /2 HTTP/1.1" 200 -
