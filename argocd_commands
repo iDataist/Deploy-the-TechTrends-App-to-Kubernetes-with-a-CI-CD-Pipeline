@@ -1,0 +1,19 @@
+minikube start
+
+# deploy ArgoCD
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+# get login password, username - "admin", address - "localhost:8080"
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+kubectl get po -n argocd
+kubectl get svc -n argocd
+kubectl get svc -n argocd argocd-server -o yaml > argocd-nodeport.yaml
+kubectl apply -f argocd-nodeport.yaml
+
+kubectl apply -f argocd-python.yaml
+kubectl get application -n argocd
+kubectl get po -A
+kubectl get po
