@@ -1,9 +1,6 @@
 namespace:
   name: prod
 
-app:
-  name: techtrends
-  
 service:
   port: 7111
   targetPort: 3111
