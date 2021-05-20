@@ -1,0 +1,10 @@
+apiVersion: v1
+name: {{ .Values.app.name }} 
+description: TechTrends deployment
+keywords:
+- python
+- {{ .Values.app.name }} 
+version: 1.0.0
+maintainers:
+- name: Hui Ren
+  email: hui.ren@xyz.com

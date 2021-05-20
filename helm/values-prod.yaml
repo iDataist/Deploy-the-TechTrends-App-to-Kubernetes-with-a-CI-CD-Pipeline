@@ -1,0 +1,30 @@
+namespace:
+  name: prod
+
+app:
+  name: techtrends
+  
+service:
+  port: 7111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+
+image:
+  repository: hwdgrmy/techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 5
+
+resources:
+  requests:
+    memory: 128Mi
+    CPU: 350m
+  limits: 
+    memory: 256Mi
+    CPU: 500m
+
+containerPort: 3111
+livenessProbePath: /healthz
+readinessProbePath: /healthz

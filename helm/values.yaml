@@ -1,0 +1,30 @@
+namespace:
+  name: sandbox
+
+app:
+  name: techtrends
+  
+service:
+  port: 4111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+
+image:
+  repository: hwdgrmy/techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+resources:
+  requests:
+    memory: 64Mi
+    CPU: 250m
+  limits: 
+    memory: 128Mi
+    CPU: 500m
+
+containerPort: 3111
+livenessProbePath: /healthz
+readinessProbePath: /healthz
