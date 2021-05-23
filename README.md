@@ -1,5 +1,7 @@
 # TechTreds
 
+[![Docker Build and Push](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml/badge.svg)](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml)
+
 ## Overview
 TechTrends is an online website used as a news sharing platform, that enables consumers to access the latest news within the cloud-native ecosystem. In addition to accessing the available articles, readers are able to create new media articles and share them. The first prototype of the TechTrends website was built. In this project, I packaged and deployed TechTrends to Kubernetes using a CI/CD pipeline.
 
