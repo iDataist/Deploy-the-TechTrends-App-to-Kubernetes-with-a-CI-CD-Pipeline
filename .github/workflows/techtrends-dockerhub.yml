@@ -9,6 +9,7 @@ on:
       - .git
       - .github
       - .gitattributes
+      - .DS_Store
       - screenshots
       - README.md
       - docker_commands
