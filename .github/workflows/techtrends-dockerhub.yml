@@ -5,17 +5,11 @@ name: Docker Build and Push
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - .git
-      - .github
-      - .gitattributes
-      - .DS_Store
-      - screenshots
-      - README.md
-      - docker_commands
-      - kubernetes_commands
-      - argocd_commands
-      - Vagrantfile
+    paths:
+      - 'techtrends'
+      - 'kubernetes'
+      - 'helm'
+      - 'argocd'
   pull_request:
     branches: [ main ]
 
