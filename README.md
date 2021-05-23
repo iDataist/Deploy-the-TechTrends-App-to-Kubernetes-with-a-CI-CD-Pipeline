@@ -3,7 +3,7 @@
 [![Docker Build and Push](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml/badge.svg)](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml)
 
 ## Overview
-TechTrends is an online website used as a news sharing platform, that enables consumers to access the latest news within the cloud-native ecosystem. In addition to accessing the available articles, readers are able to create new media articles and share them. The first prototype of the TechTrends website was built. In this project, I packaged and deployed TechTrends to Kubernetes using a CI/CD pipeline.
+TechTrends is an online website used as a news-sharing platform that enables consumers to access the latest news within the cloud-native ecosystem. In addition to accessing the available articles, readers can create new media articles and share them. In this project, I packaged and deployed TechTrends to Kubernetes using a CI/CD pipeline. First, I packaged the app with Docker and distributed it through DockerHub. Second, I released the app to the sandbox environment with Kubernetes resources. Lastly, I used Helm to template the Kubernetes manifests and automate the app release to the staging and production environments using GitHub Actions and ArgoCD. 
 
 The web application is written using the Python Flask framework. It uses SQLite, a lightweight disk-based database to store the submitted articles. Below are the main components of the application:
 ![](screenshots/webapp_components.png)
