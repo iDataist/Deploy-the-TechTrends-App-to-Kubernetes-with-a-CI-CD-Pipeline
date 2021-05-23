@@ -5,11 +5,15 @@ import logging
 from multiprocessing import Value
 
 counter = Value('i', 0)
+length = Value('i', 0)
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
+    with counter.get_lock():
+        counter.value += 1
     return connection
 
 # Function to get a post using its ID
@@ -29,6 +33,8 @@ app.config['SECRET_KEY'] = 'your secret key'
 def index():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
+    with length.get_lock():
+        length.value = len(posts)
     connection.close()
     return render_template('index.html', posts=posts)
 
@@ -78,10 +84,7 @@ def healthcheck():
 
 @app.route("/metrics")
 def metrics():
-    with counter.get_lock():
-        counter.value += 1
-        out = counter.value
-    return jsonify(count=out)
+    return jsonify(db_connection_count=counter.value, post_count=length.value)
 
 # start the application on port 3111
 if __name__ == "__main__":
