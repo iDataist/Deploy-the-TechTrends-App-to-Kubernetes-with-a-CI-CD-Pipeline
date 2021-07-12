@@ -1,4 +1,4 @@
-# CI/CD with Cloud Native Tooling
+# Deploying the TechTrends App to Kubernetes with a CI CD Pipeline
 
 [![Docker Build and Push](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml/badge.svg)](https://github.com/iDataist/TechTrends/actions/workflows/techtrends-dockerhub.yml)
 
